@@ -1,0 +1,75 @@
+<html lang="kr">
+  	<head>
+    <!-- Basic Page Needs
+  ================================================== -->
+    <title>래빈 - 입고내역 &gt; 주문신청 현황</title>
+    {% load static %}
+	<link href='{% static "css/table_style.css" %}' rel="stylesheet">
+	</head>
+  <body>
+
+
+
+    <div class="table-users">
+      <table class='table-all' cellspacing="0">
+        <tr class="menu-bar">
+          <th width="150" style='font-weight: bold;'>이름</th>
+          <th width="150" style='font-weight: bold;'>검색량</th>
+          <th width="150" style='font-weight: bold;'>상품량</th>
+		  <th width="90" style='font-weight: bold;'>경쟁량</th>
+		  <th width="150" style='font-weight: bold;'>광고단가</th>
+
+		  <th width="150" style='font-weight: bold;'>스카우트</th>
+
+     
+		</tr>
+
+		{% for li in scoutComp %}
+
+			{% if li.5 == "링크없음" %}
+				<tr >
+					<td id='name' style='font-weight: bold;' >{{li.0}}</td>
+					<td id='search' style='font-weight: bold;'>{{li.1}}</td>
+					<td id='prd' style='font-weight: bold;'>{{li.2}}</td>
+					<td id ='comp' style='font-weight: bold;'>{{li.3}}</td>
+					<td id ='bid' style='font-weight: bold;'>{{li.4}}</td>
+
+					<td id ='link' style='font-weight: bold;'> 
+
+						<form name="myForm" action="{% url 'post' %}" method="POST">
+							<input type="hidden" name="some_key1" value={{li.0}}/>
+							<button type="submit" class="btn">스카우트</button>
+							</form>
+	
+							
+					</td>
+						
+			{% else %}			
+				<tr>
+				<td id='name' OnClick=window.open('{{li.5}}') style='font-weight: bold;' >{{li.0}}</td>
+				<td id='search' style='font-weight: bold;'>{{li.1}}</td>
+				<td id='prd' style='font-weight: bold;'>{{li.2}}</td>
+				<td id ='comp' style='font-weight: bold;'>{{li.3}}</td>
+				<td id ='bid' style='font-weight: bold;'>{{li.4}}</td>
+
+
+				<td id ='link' style='font-weight: bold;'> 
+					<form name="myForm" action="{% url 'post' %}" method="POST">
+						<input type="hidden" name="some_key1" value={{li.0}}/>
+						<button type="submit" class="btn">스카우트</button>
+						</form>
+
+						
+				</td>
+				</tr>
+			{% endif %}
+		{% endfor %}
+
+          </td>
+        </tr>
+      </table>
+	</div>
+
+
+  </body>
+</html>

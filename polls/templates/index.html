@@ -1,0 +1,61 @@
+<html lang="en">
+{% load static %}
+<head>
+	<meta charset="utf-8" />
+	<title>Table Style</title>
+  <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+  <link href='{% static "css/style.css" %}' rel="stylesheet">
+</head>
+
+<body>
+	<div class="table-title">
+		<h3>카테고리</h3>
+	</div>
+	<table class="table-fill">
+		<thead>
+			<tr>
+				<th class="text-left">선택</th>
+
+			</tr>
+		</thead>
+		<tbody class="table-hover">
+			<tr>
+				<td class="text-left"; onClick = " location.href={% url 'cloth' %} ">패션의류</td>
+
+			</tr>
+			<tr>
+				<td class="text-left"; onClick = " location.href={% url 'fasionitem' %} ">패션잡화</td>
+
+			</tr>
+			<tr>
+				<td class="text-left"; onClick = " location.href={% url 'cosmetics' %} ">화장품</td>
+
+			</tr>
+			<tr>
+				<td class="text-left"; onClick = " location.href={% url 'digital' %} ">디지털</td>
+
+			</tr>
+			<tr>
+				<td class="text-left"; onClick = " location.href={% url 'interior' %} ">인테리어</td>
+
+      </tr>
+			<tr>
+				<td class="text-left"; onClick = " location.href={% url 'baby' %} ">육아</td>
+
+      </tr>
+			<tr>
+				<td class="text-left"; onClick = " location.href={% url 'food' %} ">식품</td>
+
+      </tr>
+			<tr>
+				<td class="text-left"; onClick = " location.href={% url 'sports' %} " >스포츠</td>
+
+      </tr>
+			<tr>
+				<td class="text-left"; onClick = " location.href={% url 'living' %} ">생활</td>
+
+			</tr>
+		</tbody>
+	</table>
+
+</body>

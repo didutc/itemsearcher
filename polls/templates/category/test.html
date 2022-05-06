@@ -1,0 +1,18 @@
+<html lang="kr">
+  <head>
+    <!-- Basic Page Needs
+  ================================================== -->
+    <title>래빈 - 입고내역 &gt; 주문신청 현황</title>
+
+
+    <link href='{% static "css/table_style.css" %}' rel="stylesheet">
+  <body>
+    <form name="myForm" action="{% url 'post' %}" method="POST">
+        <input type="hidden" name="some_key1" value="some_value1" />
+        <input type="hidden" name="some_key2" value="some_value2" />
+        </form>
+        
+        <a href="#" onclick="javascript:document.myForm.submit();">click</a>
+
+  </body>
+</html>
