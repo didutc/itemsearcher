@@ -145,15 +145,14 @@ def post(request):
         "genders": "f,m",
         "ages": "10,20,30,40"
     }
-    print(category)
+
     json_trans = json.dumps(duration_dict)
     r = requests.post('https://api.itemscout.io/api/category/'+str(category)+'/data',
                       data=duration_dict)
 
     key_id = json.loads(r.text)
-    print(category)
-    # print(key_id)
-    print(key_id)
+
+
     array = key_id['data']['data']
     i = 1
     json_key = []

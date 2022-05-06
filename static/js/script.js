@@ -6,7 +6,8 @@ $('.btn').click(function () {
 function newpage(id){
     window.open('https://search.shopping.naver.com/search/all?query='+id.innerText+''); 
     window.open('https://www.coupang.com/np/search?component=&q='+id.innerText+''); 
-    console.log(id.innerText)
+    window.open('https://domemedb.domeggook.com/index/item/supplyList.php?sf=subject&enc=utf8&fromOversea=0&mode=search&sw='+id.innerText+''); 
+
 
   }
 $('.btnclose').click(function () {
