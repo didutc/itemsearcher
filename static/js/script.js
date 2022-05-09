@@ -44,17 +44,20 @@ function collect(removeButton) {
         });
     const printAddress = () => {
         rep.then((a) => {
+            // 0 -> 중국어 1-> 영어 2->일본어
             var x = a
             webwindow = [];
 
             webwindow.push(window.open("https://www.google.com/search?q=" + x[0] + "&source=lnms&tbm=isch&sa"))
-
+            webwindow.push(window.open("https://s.1688.com/selloffer/offer_search.htm?keywords=" + x[0]))
+            
             webwindow.push(window.open("https://www.google.com/search?q=" + x[1] + "&source=lnms&tbm=isch&sa"))
-
+            webwindow.push(window.open("https://www.amazon.com/s?k=" + x[1]))
+            
             webwindow.push(window.open("https://www.google.com/search?q=" + x[2] + "&source=lnms&tbm=isch&sa"))
             console.log('not working')
-            webwindow.push(window.open("https://minne.com/category/saleonly/stationery?sort=none&input_method=typing&q=" + x[2]))
-
+            webwindow.push(window.open("https://search.rakuten.co.jp/search/mall/" + x[2]))
+            
             // webwindow.push(window.open("https://www.google.com/search?q=" + x[0] + "&source=lnms&tbm=isch&sa"))
             // window.open("https://www.google.com/search?q=" + x[1] + "&source=lnms&tbm=isch&sa")
             // window.open("https://www.google.com/search?q=" + x[2] + "&source=lnms&tbm=isch&sa")
