@@ -50,6 +50,8 @@ function collect(removeButton) {
 
             webwindow.push(window.open("https://www.google.com/search?q=" + x[0] + "&source=lnms&tbm=isch&sa"))
             webwindow.push(window.open("https://s.1688.com/selloffer/offer_search.htm?keywords=" + x[0]))
+            webwindow.push(window.open("https://s.taobao.com/search?q=" + x[0]))
+            
             
             webwindow.push(window.open("https://www.google.com/search?q=" + x[1] + "&source=lnms&tbm=isch&sa"))
             webwindow.push(window.open("https://www.amazon.com/s?k=" + x[1]))
