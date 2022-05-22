@@ -47,9 +47,11 @@ function collect(removeButton) {
             // 0 -> 중국어 1-> 영어 2->일본어
             var x = a
             webwindow = [];
-
             webwindow.push(window.open("https://www.google.com/search?q=" + x[0] + "&source=lnms&tbm=isch&sa"))
-            webwindow.push(window.open("https://s.1688.com/selloffer/offer_search.htm?keywords=" + x[0]))
+            webwindow.push(window.open("https://ko.aliexpress.com/af/%25E7%25A0%2582%25E6%2599%2582%25E8%25A8%2588.html?d=y&origin=n&SearchText=" + x[0]))
+            
+            webwindow.push(window.open("https://s.1688.com/selloffer/offer_search.htm?keywords=" + x[3]))
+            
             webwindow.push(window.open("https://s.taobao.com/search?q=" + x[0]))
             
             
@@ -60,10 +62,7 @@ function collect(removeButton) {
             console.log('not working')
             webwindow.push(window.open("https://search.rakuten.co.jp/search/mall/" + x[2]))
             
-            // webwindow.push(window.open("https://www.google.com/search?q=" + x[0] + "&source=lnms&tbm=isch&sa"))
-            // window.open("https://www.google.com/search?q=" + x[1] + "&source=lnms&tbm=isch&sa")
-            // window.open("https://www.google.com/search?q=" + x[2] + "&source=lnms&tbm=isch&sa")
-            // window.open("https://minne.com/category/saleonly/stationery?sort=none&input_method=typing&q=" + x[2])
+
         })
 
     };

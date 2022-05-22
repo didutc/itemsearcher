@@ -132,7 +132,7 @@ def post(request):
             if category == li[0]:
 
                 category = li[-1]
-            if category == '주방용품>냄비/솥>전자레인지/오븐':
+            if category == '주방용품>냄비/솥>전자레인지/오븐용기':
 
                 category = 4381
 
@@ -266,9 +266,19 @@ def transe(request):
     # json 형 변환
     res = json.loads(response_body.decode('utf-8'))
 
+
+
+
+
     res = res['message']
     res = res['result']
     jatr = res['translatedText']
     trantext_list.append(jatr)
+    
+    t = trantext_list[0].encode('EUC-CN')
+    t = str(t)
+    t = t.replace('\\x','%')
+    t=t.split("'")[1]
+    trantext_list.append(t)
     print(trantext_list)
     return Response(trantext_list)
