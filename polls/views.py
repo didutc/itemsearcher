@@ -165,8 +165,8 @@ def post(request):
         li = array[al]
         try:
 
-            # if category != li['firstCategory']:
-            #     continue
+            if category != li['firstCategory']:
+                continue
             name = li['keyword']
             bid = li['bid']
             pc_bid = bid['pc_bid']
